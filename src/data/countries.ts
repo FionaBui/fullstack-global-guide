@@ -1,0 +1,135 @@
+import { Country } from "../types/Country";
+
+export const countries : Country[] = [
+    {
+      name: 'Vietnam',
+      capital: 'Hanoi',
+      region: 'Asia',
+      subregion: 'Southeast Asia',
+      population: 98000000,
+      flag: 'https://flagcdn.com/w320/vn.png',
+      languages: ['Vietnamese'],
+      currencies: ['VND'],
+      timezones: ['UTC+07:00'],
+      borders: ['CHN', 'LAO', 'KHM'],
+      cca3: 'VNM'
+    },
+    {
+      name: 'Sweden',
+      capital: 'Stockholm',
+      region: 'Europe',
+      subregion: 'Northern Europe',
+      population: 10500000,
+      flag: 'https://flagcdn.com/w320/se.png',
+      languages: ['Swedish'],
+      currencies: ['SEK'],
+      timezones: ['UTC+01:00'],
+      borders: ['NOR', 'FIN'],
+      cca3: 'SWE'
+    },
+    {
+      name: 'Germany',
+      capital: 'Berlin',
+      region: 'Europe',
+      subregion: 'Western Europe',
+      population: 83000000,
+      flag: 'https://flagcdn.com/w320/de.png',
+      languages: ['German'],
+      currencies: ['EUR'],
+      timezones: ['UTC+01:00'],
+      borders: ['AUT', 'BEL', 'CZE', 'DNK', 'FRA', 'LUX', 'NLD', 'POL', 'CHE'],
+      cca3: 'DEU'
+    },
+    {
+      name: 'France',
+      capital: 'Paris',
+      region: 'Europe',
+      subregion: 'Western Europe',
+      population: 67000000,
+      flag: 'https://flagcdn.com/w320/fr.png',
+      languages: ['French'],
+      currencies: ['EUR'],
+      timezones: ['UTC+01:00'],
+      borders: ['AND', 'BEL', 'DEU', 'ITA', 'LUX', 'MCO', 'ESP', 'CHE'],
+      cca3: 'FRA'
+    },
+    {
+      name: 'Japan',
+      capital: 'Tokyo',
+      region: 'Asia',
+      subregion: 'Eastern Asia',
+      population: 125000000,
+      flag: 'https://flagcdn.com/w320/jp.png',
+      languages: ['Japanese'],
+      currencies: ['JPY'],
+      timezones: ['UTC+09:00'],
+      borders: [],
+      cca3: 'JPN'
+    },
+    {
+      name: 'United States',
+      capital: 'Washington, D.C.',
+      region: 'Americas',
+      subregion: 'North America',
+      population: 331000000,
+      flag: 'https://flagcdn.com/w320/us.png',
+      languages: ['English'],
+      currencies: ['USD'],
+      timezones: ['UTC−04:00', 'UTC−05:00', 'UTC−06:00', 'UTC−07:00', 'UTC−08:00'],
+      borders: ['CAN', 'MEX'],
+      cca3: 'USA'
+    },
+    {
+      name: 'Canada',
+      capital: 'Ottawa',
+      region: 'Americas',
+      subregion: 'North America',
+      population: 38000000,
+      flag: 'https://flagcdn.com/w320/ca.png',
+      languages: ['English', 'French'],
+      currencies: ['CAD'],
+      timezones: ['UTC−03:30', 'UTC−08:00'],
+      borders: ['USA'],
+      cca3: 'CAN'
+    },
+    {
+      name: 'Brazil',
+      capital: 'Brasília',
+      region: 'Americas',
+      subregion: 'South America',
+      population: 213000000,
+      flag: 'https://flagcdn.com/w320/br.png',
+      languages: ['Portuguese'],
+      currencies: ['BRL'],
+      timezones: ['UTC−03:00'],
+      borders: ['ARG', 'BOL', 'COL', 'GUF', 'GUY', 'PRY', 'PER', 'SUR', 'URY', 'VEN'],
+      cca3: 'BRA'
+    },
+    {
+      name: 'Norway',
+      capital: 'Oslo',
+      region: 'Europe',
+      subregion: 'Northern Europe',
+      population: 5400000,
+      flag: 'https://flagcdn.com/w320/no.png',
+      languages: ['Norwegian'],
+      currencies: ['NOK'],
+      timezones: ['UTC+01:00'],
+      borders: ['FIN', 'SWE', 'RUS'],
+      cca3: 'NOR'
+    },
+    {
+      name: 'Australia',
+      capital: 'Canberra',
+      region: 'Oceania',
+      subregion: 'Australia and New Zealand',
+      population: 25000000,
+      flag: 'https://flagcdn.com/w320/au.png',
+      languages: ['English'],
+      currencies: ['AUD'],
+      timezones: ['UTC+10:00'],
+      borders: [],
+      cca3: 'AUS'
+    }
+  ]
+  
