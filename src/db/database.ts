@@ -31,6 +31,13 @@ export const getDb = async ()=> {
             cca3 TEXT UNIQUE
             )`)
 
+        await db.run(`
+          CREATE TABLE IF NOT EXISTS favorites (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            cca3 TEXT NOT NULL UNIQUE,
+            FOREIGN KEY (cca3) REFERENCES countries(cca3));
+          `)
+
         //Check if the table has no data → insert sample data
         const result = await db.get<{count : number }>('SELECT COUNT(*) as count FROM countries')
         if (result?.count === 0){
