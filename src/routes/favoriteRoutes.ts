@@ -40,6 +40,7 @@ router.delete('/:cca3', (req, res) => {
   })
 })
 
+// POST
 const postFavorite = async (req:Request, res:Response )=>{
   const db = await getDb()
   const {cca3} = req.body
