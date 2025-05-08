@@ -1,0 +1,39 @@
+.homepage {
+  margin: 2rem;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.search-content {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #cf2a2a;
+  border-radius: 10px;
+  width: 60%;
+}
+.search-input {
+  height: 2rem;
+  background-color: #fef4e4;
+  border: none;
+  width: 80%;
+  margin: 0.6rem;
+}
+.search-btn {
+  background: none;
+  font-size: 1.5rem;
+}
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+.no-result {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 1rem;
+}
