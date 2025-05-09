@@ -8,7 +8,7 @@ const router = express.Router()
 router.get('/', async (_req, res) => {
   const db = await getDb()
   const favorites = await db.all(`
-    SELECT c.* FROM favorites f
+    SELECT c.*, f.status FROM favorites f
     JOIN countries c ON f.cca3 = c.cca3
   `)
   res.json(favorites)
@@ -68,7 +68,7 @@ router.post('/',(req,res)=>{
     res.status(500).send('Unexpected error')
   })
 })
-
+// PUT
 const updateStatus = async(req:Request, res:Response)=>{
   const db = await getDb()
   const {cca3} = req.params
