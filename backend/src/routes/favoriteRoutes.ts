@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import { getDb } from '../db/database'
 
+
 const router = express.Router()
 
 // GET /favorites – get a favotite list 
@@ -67,4 +68,33 @@ router.post('/',(req,res)=>{
     res.status(500).send('Unexpected error')
   })
 })
+
+const updateStatus = async(req:Request, res:Response)=>{
+  const db = await getDb()
+  const {cca3} = req.params
+  const {status} = req.body
+
+  const validStatus = ['wishlist','visited','planning']
+  if(!validStatus.includes(status)){
+    return res.status(400).send('Invalid status')
+  }
+  try {
+    const result = await db.run('UPDATE favorites SET status = ? WHERE cca3 = ?',[status,cca3.toUpperCase()]
+    )
+    if (result.changes === 0){
+      return res.status(404).send('Favorite not found')
+    }
+    return res.status(200).send('Favorite status updated')
+  } catch (error) {
+    console.error(error)
+    return res.status(500).send('Internal server error ')
+  }
+}
+router.put('/:cca3',(req,res)=>{
+  updateStatus(req,res).catch((error)=>{
+    console.error(error);
+    res.status(500).send('Unexpected error')
+  })
+})
+
 export default router

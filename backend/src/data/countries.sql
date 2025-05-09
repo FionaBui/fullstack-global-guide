@@ -22,6 +22,7 @@ CREATE TABLE countries (
 CREATE TABLE favorites (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   cca3 TEXT NOT NULL UNIQUE,
+  status TEXT DEFAULT 'wishlist',
   FOREIGN KEY (cca3) REFERENCES countries(cca3)
 );
 
